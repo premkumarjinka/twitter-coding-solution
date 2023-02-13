@@ -1,0 +1,78 @@
+###
+// api 1 for creating user  in table if  it is not present in the table
+POST http://localhost:3000/register/
+content-type:application/json 
+
+{
+  "username": "adam_richard",
+  "password": "richard_567",
+  "name": "Adam Richard",
+  "gender": "male"
+}
+
+###
+//  ApI 2 for the login purpose and creating the jwt Token
+POST http://localhost:3000/login/
+content-type:application/json 
+
+{
+    
+  "username":"JoeBiden",
+  "password":"biden@123"
+
+}
+###
+//ApI for the authentication of the jwtToken
+GET http://localhost:3000/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc1OTc1NTM3fQ.1q7UeOC7L0XqjW3Zny9fxtiNS2qwgiXC1LQmTBWJSd4
+
+
+
+###
+// api 3 for the to get tweets 
+GET http://localhost:3000/user/tweets/feed/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc1OTc1NTM3fQ.1q7UeOC7L0XqjW3Zny9fxtiNS2qwgiXC1LQmTBWJSd4
+
+###
+//  api 4 for the following people names
+GET http://localhost:3000/user/following/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc1OTc1NTM3fQ.1q7UeOC7L0XqjW3Zny9fxtiNS2qwgiXC1LQmTBWJSd4
+
+
+###
+
+// api 5 for the followers people names
+GET http://localhost:3000/user/followers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc1OTc1NTM3fQ.1q7UeOC7L0XqjW3Zny9fxtiNS2qwgiXC1LQmTBWJSd4
+
+###
+// api 6 for the tweets
+GET http://localhost:3000/tweets/2/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc1OTc1NTM3fQ.1q7UeOC7L0XqjW3Zny9fxtiNS2qwgiXC1LQmTBWJSd4
+
+###
+// api 7 for the likes  of the tweeted people response 
+GET http://localhost:3000/tweets/1/likes/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc1OTc1NTM3fQ.1q7UeOC7L0XqjW3Zny9fxtiNS2qwgiXC1LQmTBWJSd4
+
+
+###
+// api 8 for the replies
+GET http://localhost:3000/tweets/1/replies/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc1OTc1NTM3fQ.1q7UeOC7L0XqjW3Zny9fxtiNS2qwgiXC1LQmTBWJSd4
+
+###
+// api 9 for the user tweets
+GET http://localhost:3000/user/tweets/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc1OTc1NTM3fQ.1q7UeOC7L0XqjW3Zny9fxtiNS2qwgiXC1LQmTBWJSd4
+
+
+###
+//api 10 for creating the tweet in tweet table
+POST  http://localhost:3000/user/tweets/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc1OTc1NTM3fQ.1q7UeOC7L0XqjW3Zny9fxtiNS2qwgiXC1LQmTBWJSd4
+
+###
+// api 11 for deleting  the tweet
+DELETE  http://localhost:3000/tweets/1/ 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc1OTc1NTM3fQ.1q7UeOC7L0XqjW3Zny9fxtiNS2qwgiXC1LQmTBWJSd4
